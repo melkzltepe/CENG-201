@@ -52,7 +52,7 @@ public class LinkedList {
         size++;
     }
 
-    public void insert(int data) {
+    public void deleteByKey(int data) {
         Node current = head.next;
         Node previous = head;
         while (current.data != data) {
@@ -78,5 +78,16 @@ public class LinkedList {
             currentNode = nextNode;
         }
         head = prevNode;
+    }
+
+    public boolean search(int data) {
+        Node current = head;
+        while (current.next != null) {
+            if (current.data == data) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
     }
 }

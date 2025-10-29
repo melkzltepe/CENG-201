@@ -10,7 +10,7 @@ public class Main {
 
         myLinkedList.printLinkedList();
         System.out.println(myLinkedList.getSize());
-        myLinkedList.insert(7);
+        myLinkedList.deleteByKey(7);
         System.out.println(" ");
         myLinkedList.printLinkedList();
         System.out.println(myLinkedList.getSize());
