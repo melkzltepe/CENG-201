@@ -91,6 +91,11 @@ public class LinkedList {
         return false;
     }
 
-
+    public void insert(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+        size++;
+    }
 
 }
