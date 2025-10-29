@@ -14,5 +14,7 @@ public class Main {
         System.out.println(" ");
         myLinkedList.printLinkedList();
         System.out.println(myLinkedList.getSize());
+        myLinkedList.reverse();
+        myLinkedList.printLinkedList();
     }
 }
