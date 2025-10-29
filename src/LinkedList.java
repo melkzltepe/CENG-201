@@ -53,18 +53,22 @@ public class LinkedList {
     }
 
     public void deleteByKey(int data) {
-        Node current = head.next;
         Node previous = head;
-        while (current.data != data) {
-            if (current.next == null){
-                System.out.println("The item is not found in the list");
-                return;
-            }
+        Node current = head;
+        if (current.next != null && current.data == data) {
+            head = current.next;
+            size--;
+        }
+        while (current.next != null) {
             previous = current;
             current = current.next;
+            if (current.data == data) {
+                previous = current.next;
+                size--;
+                return;
+            }
         }
-        previous.next = current.next;
-        size--;
+
     }
 
     public void reverse() {

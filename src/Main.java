@@ -9,7 +9,7 @@ public class Main {
         myLinkedList.prepend(21);
         myLinkedList.printLinkedList();
         System.out.println(myLinkedList.getSize());
-        myLinkedList.deleteByKey(7);
+        myLinkedList.deleteByKey(21);
         System.out.println(" ");
         myLinkedList.printLinkedList();
         System.out.println(myLinkedList.getSize());
