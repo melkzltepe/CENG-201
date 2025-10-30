@@ -2,18 +2,42 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LinkedList myLinkedList = new LinkedList();
+        /*LinkedList myLinkedList = new LinkedList();
         myLinkedList.append(2);
         myLinkedList.append(7);
         myLinkedList.append(9);
         myLinkedList.prepend(21);
         myLinkedList.printLinkedList();
         System.out.println(myLinkedList.getSize());
-        myLinkedList.deleteByKey(21);
         System.out.println(" ");
         myLinkedList.printLinkedList();
         System.out.println(myLinkedList.getSize());
         myLinkedList.reverse();
         myLinkedList.printLinkedList();
+        myLinkedList.makeCircular();
+        System.out.println(myLinkedList.isCircular());
+        myLinkedList.printCircularLinkedList();
+        System.out.println(" ");
+        myLinkedList.insertCircularLinkedList(6);
+        myLinkedList.printCircularLinkedList();
+        System.out.println(" ");
+        System.out.println(myLinkedList.countCircularLinkedList());
+        myLinkedList.printMiddle();*/
+
+        DoublyLinkedList myLinkedList = new DoublyLinkedList();
+        myLinkedList.appendDoublyLinkedList(8);
+        myLinkedList.appendDoublyLinkedList(700);
+        myLinkedList.appendDoublyLinkedList(9);
+        myLinkedList.appendDoublyLinkedList(5);
+        myLinkedList.appendDoublyLinkedList(2);
+        myLinkedList.appendDoublyLinkedList(3);
+        myLinkedList.appendDoublyLinkedList(4);
+        myLinkedList.printLinkedList();
+        System.out.println(myLinkedList.getSizeOfDoublyLinkedList());
+        myLinkedList.deleteNode(4);
+        myLinkedList.printLinkedList();
+        System.out.println(myLinkedList.getSizeOfDoublyLinkedList());
+        myLinkedList.printLinkedList();
+
     }
 }
