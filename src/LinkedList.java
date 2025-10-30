@@ -68,12 +68,12 @@ public class LinkedList {
                 return;
             }
         }
-
+        System.out.println("The key is not found");
     }
 
     public void reverse() {
         Node prevNode = null;
-        Node nextNode = null;
+        Node nextNode;
         Node currentNode = head;
         while (currentNode != null) {
             nextNode = currentNode.next;
