@@ -24,11 +24,7 @@ public class LinkedList {
     }
 
     public Boolean isEmpty() {
-        if (head == null) {
-            return true;
-        }else {
-            return false;
-        }
+        return (head == null);
     }
 
     public void append(int data) {
