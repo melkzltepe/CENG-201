@@ -67,4 +67,18 @@ public class DoublyLinkedList {
         System.out.println(" ");
     }
 
+    public DoublyLinkedList concat(DoublyLinkedList doublyLinkedList) {
+        if (this.head == null) {
+            return doublyLinkedList;
+        } else if (doublyLinkedList.head == null) {
+            return this;
+        }
+        DoublyNode current = head;
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = doublyLinkedList.head;
+        doublyLinkedList.head.prev = current;
+        return this;
+    }
 }
