@@ -1,6 +1,6 @@
 public class Node {
     int data;
-    Node next; //Node nesnesi tanımlıyoruz, Scanner input; gibi
+    Node next;
 
     public Node(int data) {
         this.data = data;
