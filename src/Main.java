@@ -2,10 +2,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        /*LinkedList myLinkedList = new LinkedList();
-        myLinkedList.append(2);
-        myLinkedList.append(7);
-        myLinkedList.append(9);
+        LinkedList myLinkedList = new LinkedList();
+        myLinkedList.insert(2);
+        myLinkedList.insert(7);
+        myLinkedList.insert(9);
         myLinkedList.prepend(21);
         myLinkedList.printLinkedList();
         System.out.println(myLinkedList.getSize());
@@ -22,9 +22,9 @@ public class Main {
         myLinkedList.printCircularLinkedList();
         System.out.println(" ");
         System.out.println(myLinkedList.countCircularLinkedList());
-        myLinkedList.printMiddle();*/
+        myLinkedList.printMiddle();
 
-        DoublyLinkedList myLinkedList = new DoublyLinkedList();
+        /*DoublyLinkedList myLinkedList = new DoublyLinkedList();
         myLinkedList.appendDoublyLinkedList(8);
         myLinkedList.appendDoublyLinkedList(700);
         myLinkedList.appendDoublyLinkedList(9);
@@ -38,6 +38,8 @@ public class Main {
         myLinkedList.printLinkedList();
         System.out.println(myLinkedList.getSizeOfDoublyLinkedList());
         myLinkedList.printLinkedList();
+
+        System.out.println(37149212 % 111);*/
 
     }
 }

@@ -27,10 +27,10 @@ public class LinkedList {
         return (head == null);
     }
 
-    public void append(int data) {
+    public void insert(int data) {
         Node newNode = new Node(data);
         size ++;
-        if (head == null) {
+        if (isEmpty()) {
             head = newNode;
             return;
         }
@@ -43,32 +43,31 @@ public class LinkedList {
 
     public void prepend(int data) {
         Node newNode = new Node(data);
-        newNode.next = head;
-        head = newNode;
+        newNode.next = head.next;
+        head.next = newNode;
         size++;
     }
 
-    public void deleteByKey(int data) {
-        Node previous = head;
-        Node current = head.next;
-        if (previous.data == data) {
-            head = current;
+    public void deleteByKey(int data){
+        if (isEmpty()) {
+            System.out.println("The list is empty");
             return;
         }
-        while (current != null) {
-            if (current.data == data) {
-                previous.next = current.next;
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            if (currentNode.next.data == data) {
+                currentNode.next = currentNode.next.next;
                 return;
             }
-            previous = previous.next;
-            current = current.next;
-        }
-        if (current == null) {
-            System.out.println("The key is not found");
+            currentNode = currentNode.next;
         }
     }
 
     public void reverse() {
+        if (isEmpty()) {
+            System.out.println("The list is empty");
+            return;
+        }
         Node prevNode = null;
         Node nextNode;
         Node currentNode = head;
@@ -83,20 +82,13 @@ public class LinkedList {
 
     public boolean search(int data) {
         Node current = head;
-        while (current.next != null) {
+        while (current != null) {
             if (current.data == data) {
                 return true;
             }
             current = current.next;
         }
         return false;
-    }
-
-    public void insert(int data) {
-        Node newNode = new Node(data);
-        newNode.next = head;
-        head = newNode;
-        size++;
     }
 
     public void makeCircular() {
@@ -171,7 +163,19 @@ public class LinkedList {
         System.out.println(middle.data);
     }
 
-
+    public void insertByIndex(int index, int data) {
+        if (getSize()<index+1) {
+            System.out.println("The index is not possible to reach");
+            return;
+        }
+        Node newNode = new Node(data);
+        Node currentNode = head;
+        for (int i = 0; i < index ; i++) {
+            currentNode = currentNode.next;
+        }
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+    }
 
 
 
